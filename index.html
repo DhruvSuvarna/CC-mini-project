@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200">
+    
+    <div class="navbar">
+        <h1>Reading List</h1>
+    </div>
+
+    <form id="add-book-form" class="mt-4 flex flex-col space-y-2 px-10">
+        <input type="text" id="book-title" placeholder="Book Title" required
+            class="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400">
+        <input type="text" id="author-name" placeholder="Author Name" required
+            class="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400">
+        <input type="text" id="genre" placeholder="Genre" required
+            class="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400">
+        <input type="file" id="cover-image" accept="image/*" required
+            class="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400">
+        <button type="submit" class="px-4 py-2 text-white rounded-md btn">Add Book</button>
+    </form>
+      
+    <div id="reading-list" class="mx-5"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+    
+    <script src="firebase-config.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
